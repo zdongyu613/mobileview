@@ -1,2 +1,2 @@
-# checkpoint2
- 
+# mobile view checkpoint
+
