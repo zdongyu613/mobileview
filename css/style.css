@@ -6,16 +6,22 @@ html{
 body{
     min-height: inherit;
     width: inherit;
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-color: #272A33;
+    background-image: url("../images/background.jpg");
+    background-size: auto 30%;
+    background-position: center;
     color: azure;
-    font-family:'Noto Sans JP', 'Lora', sans-serif, Serif;
+    font-family: 'Lora','Noto Sans JP', sans-serif, Serif;
 }
+
 
 header{
     width: inherit;
-    display: grid;
-    max-height: 220px;
+    display: flex;
+    flex-direction: column;
     border-bottom: solid #CCD1DE 5px;
 }
 
@@ -42,7 +48,9 @@ h1{
     font-weight: bold;
     font-size: 100px;
     text-align: left;
-    margin-left: 60px;
+    margin-left: 10px;
+    animation-name: ease-in;
+    animation-duration: 2s;
 }
 
 h2{
@@ -50,18 +58,16 @@ h2{
     margin-left: 30px;
     margin-top: 10px;
     margin-bottom: 20px;
-}
-
-nav{
-    height: fit-content;
+    font-weight: bold;
 }
 
 img{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    max-width: 70%;
+    max-width: 100%;
     padding: 2px;
+    max-height: 900px;
 }
 
 a{
@@ -75,27 +81,29 @@ p{
     margin: 10px 20px;
 }
 
+main>p, .main-text>p{
+    white-space: pre-line;
+}
+/*nav bar styling*/
 nav ul{
-    display: grid;
-    grid-template:40px / repeat(4,1fr);
+    display: flex;
+    flex-direction: column;
 }
 nav li{
     display: grid;
     border: solid 3px azure;
     background-color: #5371bd;
-    min-width: 0;
-    overflow: hidden;
+    height: 30px;
+    text-align: center;
 }
 
 li a{
-    display: grid;
     color: azure;
-    overflow: hidden;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 22px;
-    place-content: center;
-    align-items: center;
+    font-size: 21px;
+    height: inherit;
+    padding-top: 3px;
 }
 
 .self{
@@ -108,6 +116,7 @@ li a{
     font-size: 28px;
     width: 170px;
     align-self: center;
+    order: 1;
 }
 
 .main-text{
@@ -146,17 +155,14 @@ li a{
     font-style: italic;
     font-weight: bold;
     color: #c7c7d9;
-    background-color: #272A33;
 }
 
 a:hover,a:focus{
-    background-color: #727A94;
+    background-color: #8e92af;
 }
 
 a:active{
     background-color: #471640;
-    font-weight: bold;
-    border: 3px solid gray;
 }
 .gallery img:hover{
     border: double 15px #eedec5;
@@ -183,4 +189,168 @@ a:active{
     font-style: italic;
     margin-top: 8px;
     text-align: center;
+}
+/*form styling*/
+form{
+    font-family: 'Lora', 'Noto Sans JP', sans-serif, Serif;
+    border: #CCD1DE solid 2px;
+    border-radius: 5px;
+    margin: 20px;
+    background-color: #425758;
+}
+fieldset{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+legend{
+    font-size: 40px;
+    margin: 10px auto 20px;
+    font-weight: bold;
+}
+form div{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 15px;
+    align-items: center;
+}
+input{
+    font-size: 18px;
+    height: 22px;
+    max-width: 60%;
+}
+#message_box{
+    flex-direction: column;
+    align-items: flex-start;
+}
+#message_id{
+    margin: 10px;
+}
+textarea{
+    height: 10em;
+    width: 90%;
+    align-self: center;
+}
+#submit_id{
+    align-self: center;
+    padding: 7px 35px;
+    height: auto;
+    width: auto;
+    border: none;
+    border-radius: 60px;
+    display: inline-block;
+    background-color: #6383d4;
+    color: white;
+    font-size: 18px;
+}
+#submit_id:focus,#submit_id:hover{
+    background-color: #7aaafe;
+}
+#submit_id:active{
+    background-color: #703a69;
+}
+/*desktop styling*/
+@media screen and (min-width: 480px) {
+    body{
+        background-size: auto 100%;
+    }
+    header{
+        border-bottom: none;
+    }
+    h1{
+        margin-left: 60px;
+    }
+    nav{
+        border-bottom: #703a69 solid 5px;
+    }
+    nav ul{
+        width: inherit;
+        flex-direction: row;
+        justify-content: center;
+    }
+    nav li{
+        flex-basis: 120px;
+        flex-grow: 1;
+    }
+    img{
+        max-width: 70%;
+        min-width: 425px;
+    }
+    .skip{
+        position: absolute;
+        margin-top:-400px ;
+    }
+    .skip:focus{
+        margin-top:0;
+    }
+    /*form styling*/
+    form{
+        max-width: 800px;
+        margin: 20px auto auto 20px;
+    }
+    fieldset{
+        display: grid;
+        grid-template-areas: "legend legend"
+        "name name"
+        "email phone"
+        "comment comment"
+        "submit submit";
+    }
+    form div{
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        min-height: 70px;
+    }
+    legend{
+        grid-area: legend
+    }
+    label{
+        font-size: 22px;
+    }
+    input{
+        max-width: 100%;
+        width: 100%;
+        box-sizing: border-box;
+        justify-self: center;
+        height: 30px;
+    }
+    #name_box{
+        grid-area: name;
+    }
+    #email_box{
+        grid-area: email;
+    }
+    #phone_box{
+        grid-area: phone;
+    }
+    #message_box{
+        grid-area: comment;
+        align-self: center;
+    }
+    textarea{
+        width: 100%;
+        box-sizing: border-box;
+    }
+    #submit_id{
+        grid-area: submit;
+        height: 35px;
+        width: 200px;
+        justify-self: center;
+    }
+}
+@keyframes ease-in {
+    from{
+        opacity: 0;
+        margin-top: -50px;
+    }
+    to{
+        opacity: 100;
+        margin-top: 0;
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    h1{
+        animation:none
+    }
 }
