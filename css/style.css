@@ -26,8 +26,14 @@ header{
 }
 
 main{
-    width: inherit;
+    max-width: 1500px;
     padding: 25px;
+    align-self: center;
+    background-color: rgba(0,0,0,.25);
+}
+
+.discography_main{
+    width: 100%;
 }
 
 footer{
@@ -81,6 +87,16 @@ p{
     margin: 10px 20px;
 }
 
+audio{
+    background-color: #CCD1DE;
+    border: #CCD1DE solid 1px;
+    border-radius: 20px;
+    max-width: 30%;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+}
+
 main>p, .main-text>p{
     white-space: pre-line;
 }
@@ -132,13 +148,13 @@ li a{
 
 .gallery{
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(170px,500px));
+    grid-template-columns: repeat(auto-fill,minmax(170px,450px));
     grid-gap: 10px;
     margin: 25px;
     justify-content: center;
 }
 .gallery li{
-    max-width: 500px;
+    max-width: 450px;
     min-width: 170px;
 }
 .gallery img{
@@ -190,6 +206,7 @@ a:active{
     margin-top: 8px;
     text-align: center;
 }
+
 /*form styling*/
 form{
     font-family: 'Lora', 'Noto Sans JP', sans-serif, Serif;
@@ -205,8 +222,11 @@ fieldset{
 }
 legend{
     font-size: 40px;
-    margin: 10px auto 20px;
+    margin: 10px auto 5px;
     font-weight: bold;
+}
+label{
+    font-size: 18px;
 }
 form div{
     display: flex;
@@ -275,6 +295,11 @@ textarea{
     img{
         max-width: 70%;
         min-width: 425px;
+    }
+    .gallery img{
+        min-width: 0;
+        max-width: 100%;
+        width: 90%;
     }
     .skip{
         position: absolute;
