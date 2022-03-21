@@ -271,6 +271,7 @@ audio{
     bottom: 20px;
 }
 
+
 /*desktop styling*/
 @media screen and (min-width: 480px) {
     body{
