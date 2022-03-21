@@ -214,6 +214,7 @@ legend{
     font-size: 40px;
     margin: 10px auto 5px;
     font-weight: bold;
+    align-self: center;
 }
 label{
     font-size: 18px;
