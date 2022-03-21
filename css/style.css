@@ -4,7 +4,7 @@ html{
 }
 
 body{
-    min-height: inherit;
+
     width: inherit;
     display: flex;
     flex-direction: column;
@@ -204,16 +204,20 @@ form{
     border-radius: 5px;
     margin: 20px;
     background-color: #425758;
+    max-width: 100%;
 }
+
 fieldset{
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: auto;
     margin-bottom: 10px;
 }
+
 legend{
     font-size: 40px;
     margin: 10px auto 5px;
     font-weight: bold;
+    align-self: center;
 }
 label{
     font-size: 18px;
@@ -242,7 +246,7 @@ textarea{
     align-self: center;
 }
 #submit_id{
-    align-self: center;
+    justify-self: center;
     padding: 7px 35px;
     height: auto;
     width: auto;
