@@ -87,16 +87,6 @@ p{
     margin: 10px 20px;
 }
 
-audio{
-    color: #CCD1DE;
-    border: #CCD1DE solid 1px;
-    border-radius: 20px;
-    max-width: 25%;
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-}
-
 main>p, .main-text>p{
     white-space: pre-line;
 }
@@ -269,6 +259,18 @@ textarea{
 #submit_id:active{
     background-color: #703a69;
 }
+
+/*audio player styling*/
+audio{
+    background-color: #CCD1DE;
+    border: #CCD1DE solid 1px;
+    border-radius: 10px;
+    max-width: 25%;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+}
+
 /*desktop styling*/
 @media screen and (min-width: 480px) {
     body{
