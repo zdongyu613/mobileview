@@ -19,10 +19,7 @@ body{
 
 
 header{
-    width: inherit;
-    display: flex;
-    flex-direction: column;
-    border-bottom: solid #CCD1DE 5px;
+    width: 100%;
 }
 
 main{
@@ -99,17 +96,19 @@ nav li{
     display: grid;
     border: solid 3px azure;
     background-color: #5371bd;
-    height: 30px;
     text-align: center;
+    flex-basis: 30px;
 }
 
 li a{
+    box-sizing: border-box;
     color: azure;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 21px;
-    height: inherit;
-    padding-top: 3px;
+    height: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .self{
@@ -318,14 +317,8 @@ path {
     body{
         background-size: auto 100%;
     }
-    header{
-        border-bottom: none;
-    }
     h1{
         margin-left: 60px;
-    }
-    nav{
-        border-bottom: #703a69 solid 5px;
     }
     nav ul{
         width: inherit;
