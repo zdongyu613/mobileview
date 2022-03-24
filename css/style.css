@@ -118,11 +118,17 @@ li a{
 
 .skip{
     padding:10px;
-    margin-left: 25px;
     font-size: 28px;
-    width: 170px;
+    width: 100%;
+    text-align: center;
     align-self: center;
     order: 1;
+    position: absolute;
+    margin-top:-400px ;
+}
+
+.skip:focus{
+    margin-top:0;
 }
 
 .main-text{
@@ -339,13 +345,7 @@ path {
         max-width: 100%;
         width: 90%;
     }
-    .skip{
-        position: absolute;
-        margin-top:-400px ;
-    }
-    .skip:focus{
-        margin-top:0;
-    }
+
     /*form styling*/
     form{
         max-width: 800px;
